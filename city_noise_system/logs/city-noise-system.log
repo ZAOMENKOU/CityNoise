@@ -1,0 +1,1073 @@
+2026-03-19 16:01:11 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - Starting CityNoiseSystemApplication using Java 17.0.13 with PID 3152 (D:\APP\project\new\city_noise_system\target\classes started by PSW in D:\APP\project\new\city_noise_system)
+2026-03-19 16:01:11 [main] DEBUG c.e.city_noise_system.CityNoiseSystemApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2026-03-19 16:01:11 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 16:01:11 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2026-03-19 16:01:12 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 16:01:12 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 16:01:12 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-03-19 16:01:12 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-19 16:01:12 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1263 ms
+2026-03-19 16:01:12 [main] DEBUG c.e.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-03-19 16:01:12 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2026-03-19 16:01:13 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 16:01:13 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - Started CityNoiseSystemApplication in 3.094 seconds (process running for 3.383)
+2026-03-19 16:01:24 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 16:01:24 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 16:01:24 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-03-19 16:01:24 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/monitor-stations
+2026-03-19 16:01:24 [http-nio-8080-exec-1] WARN  c.e.c.filter.JwtAuthenticationFilter - 请求缺少Authorization头: /api/common/monitor-stations
+2026-03-19 16:01:24 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:01:24 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:01:24 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 16:01:24 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fb18230
+2026-03-19 16:01:24 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 16:01:25 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:01:25 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:01:25 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:01:25 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 16:01:25 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 16:01:25 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:01:25 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:01:25 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:01:28 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:01:28 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:01:28 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:01:28 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:01:28 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:01:28 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:01:28 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:01:28 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:01:35 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:01:35 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/standards
+2026-03-19 16:01:35 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/standards
+2026-03-19 16:01:35 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:01:41 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/map-points
+2026-03-19 16:01:41 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:01:41 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:01:41 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/map-points
+2026-03-19 16:01:41 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:01:41 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:01:50 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:01:50 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/standards
+2026-03-19 16:01:50 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/standards
+2026-03-19 16:01:50 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:02:06 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/users
+2026-03-19 16:02:06 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/users
+2026-03-19 16:02:10 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 16:02:10 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 16:02:14 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/workers
+2026-03-19 16:02:14 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/tasks/monitor
+2026-03-19 16:02:14 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/tasks/monitor
+2026-03-19 16:02:14 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/workers
+2026-03-19 16:02:21 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:02:21 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/map-points
+2026-03-19 16:02:21 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:02:21 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:02:21 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/map-points
+2026-03-19 16:02:21 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:02:26 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:02:26 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/standards
+2026-03-19 16:02:26 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/standards
+2026-03-19 16:02:26 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:02:49 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/map-points
+2026-03-19 16:02:49 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:02:49 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:02:49 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/map-points
+2026-03-19 16:02:49 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:02:49 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:02:50 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:02:50 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:02:50 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:02:50 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:02:50 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:02:50 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:02:50 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:02:50 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:03:08 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 16:03:08 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 16:03:09 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/users
+2026-03-19 16:03:09 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/users
+2026-03-19 16:03:14 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/users
+2026-03-19 16:03:14 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/users
+2026-03-19 16:04:49 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 16:04:49 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 16:06:36 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/users
+2026-03-19 16:06:36 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/users
+2026-03-19 16:07:42 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/auth/me
+2026-03-19 16:07:42 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/auth/me
+2026-03-19 16:07:42 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/3
+2026-03-19 16:07:42 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/3
+2026-03-19 16:07:42 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /uploads/20260301_154155_d3d00da4.png
+2026-03-19 16:07:42 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 白名单路径，跳过认证: /uploads/20260301_154155_d3d00da4.png
+2026-03-19 16:07:50 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/map-points
+2026-03-19 16:07:50 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:07:50 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:07:50 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/map-points
+2026-03-19 16:07:50 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:07:50 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:07:52 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:07:52 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:07:52 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:07:52 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:07:52 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:07:52 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:07:52 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:07:52 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:09:46 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:09:46 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:09:46 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:09:46 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:09:46 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:09:46 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:09:46 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:09:46 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:10:04 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:10:04 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:10:04 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:10:04 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:10:04 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:10:04 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:10:04 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:10:04 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:10:29 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:10:29 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:10:29 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:10:29 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:10:29 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:10:29 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:10:29 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:10:29 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:10:29 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:10:29 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:10:29 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:10:29 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:10:48 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:10:48 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:10:48 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:10:48 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:10:48 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:10:48 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:10:48 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:10:48 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:10:48 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:10:48 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:10:48 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:10:48 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:12:00 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:12:00 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:12:00 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:12:00 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:12:00 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:12:00 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:12:00 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:12:00 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:12:14 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:12:14 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:12:14 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:12:14 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:12:14 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:12:14 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:12:14 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:12:14 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:12:39 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:12:39 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:12:39 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:12:39 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:12:39 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:12:39 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:12:39 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:12:39 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:13:07 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:13:07 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:13:07 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:13:07 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:13:07 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:13:07 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:13:07 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:13:07 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:13:25 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:13:25 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:13:25 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:13:25 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:13:25 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:13:25 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:13:25 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:13:25 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:13:58 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:13:58 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:13:58 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:13:58 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:13:58 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:13:58 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:13:58 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:13:58 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:17:59 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:17:59 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:17:59 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:17:59 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:17:59 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:17:59 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:17:59 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:17:59 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:17:59 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:17:59 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:17:59 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:17:59 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:18:02 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:18:02 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:18:02 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:18:02 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:18:04 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:18:04 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:18:04 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:18:04 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:18:04 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:18:04 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:18:10 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:18:10 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/standards
+2026-03-19 16:18:10 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:18:10 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/standards
+2026-03-19 16:28:50 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:28:50 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:28:50 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:28:50 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:28:50 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:28:50 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:28:50 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:28:50 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:28:52 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:28:52 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:28:52 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:28:52 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:34:06 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 16:34:06 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 16:34:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 16:34:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 16:34:19 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - Starting CityNoiseSystemApplication using Java 17.0.13 with PID 10176 (D:\APP\project\new\city_noise_system\target\classes started by PSW in D:\APP\project\new\city_noise_system)
+2026-03-19 16:34:19 [main] DEBUG c.e.city_noise_system.CityNoiseSystemApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2026-03-19 16:34:19 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 16:34:19 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2026-03-19 16:34:20 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 16:34:20 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 16:34:20 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-03-19 16:34:20 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-19 16:34:20 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 722 ms
+2026-03-19 16:34:20 [main] DEBUG c.e.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-03-19 16:34:20 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2026-03-19 16:34:20 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 16:34:20 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - Started CityNoiseSystemApplication in 1.783 seconds (process running for 1.94)
+2026-03-19 16:34:28 [http-nio-8080-exec-5] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 16:34:28 [http-nio-8080-exec-5] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 16:34:28 [http-nio-8080-exec-5] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-03-19 16:34:28 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:34:28 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:34:28 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:34:28 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:34:28 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:34:28 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:34:28 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:34:28 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:34:28 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:34:28 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:34:28 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 16:34:28 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@105a97a1
+2026-03-19 16:34:28 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 16:34:28 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:34:28 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:34:29 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:34:29 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:34:29 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:34:29 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 16:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 16:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 16:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 16:35:00 CST 2026
+2026-03-19 16:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 16:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 16:37:35 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:37:35 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:37:35 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:37:35 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:37:35 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:37:35 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:37:35 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:37:35 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:37:35 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:37:35 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:37:35 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:37:35 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:37:36 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:37:36 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:37:36 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:37:36 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:38:25 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:38:25 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:38:25 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:38:25 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:38:25 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:38:25 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:38:25 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:38:25 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:38:25 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:38:25 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:38:25 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:38:25 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:38:25 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:38:25 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:38:25 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:38:25 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:38:45 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:38:45 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:38:45 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:38:45 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:38:45 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:38:45 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:38:46 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:38:46 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:38:46 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:38:46 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:38:50 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/map-points
+2026-03-19 16:38:50 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:38:50 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:38:50 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/map-points
+2026-03-19 16:38:50 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:38:50 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:38:55 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:38:55 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:38:55 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:38:55 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:38:55 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:38:55 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:38:55 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:38:55 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:38:56 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:38:56 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:38:56 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:38:56 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 16:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 16:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 16:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 16:40:00 CST 2026
+2026-03-19 16:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 16:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 16:40:32 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:40:32 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:40:32 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:40:32 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:40:32 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:40:32 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:40:33 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:40:33 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:40:33 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:40:33 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 16:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 16:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 16:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 16:45:00 CST 2026
+2026-03-19 16:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 16:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 16:48:18 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - Starting CityNoiseSystemApplication using Java 17.0.13 with PID 17372 (D:\APP\project\new\city_noise_system\target\classes started by PSW in D:\APP\project\new\city_noise_system)
+2026-03-19 16:48:18 [main] DEBUG c.e.city_noise_system.CityNoiseSystemApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2026-03-19 16:48:18 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 16:48:19 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2026-03-19 16:48:19 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 16:48:19 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 16:48:19 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-03-19 16:48:19 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-19 16:48:19 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 788 ms
+2026-03-19 16:48:19 [main] DEBUG c.e.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-03-19 16:48:19 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2026-03-19 16:48:20 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-03-19 16:48:20 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-19 16:48:20 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-03-19 16:48:44 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:48:44 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:48:44 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:48:44 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:48:44 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:48:44 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:48:44 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:48:44 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:48:44 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:48:44 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:48:44 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:48:44 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:48:46 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:48:46 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:48:46 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:48:46 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:49:07 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - Starting CityNoiseSystemApplication using Java 17.0.13 with PID 10512 (D:\APP\project\new\city_noise_system\target\classes started by PSW in D:\APP\project\new\city_noise_system)
+2026-03-19 16:49:07 [main] DEBUG c.e.city_noise_system.CityNoiseSystemApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2026-03-19 16:49:07 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 16:49:07 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2026-03-19 16:49:07 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 16:49:07 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 16:49:07 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-03-19 16:49:08 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-19 16:49:08 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 724 ms
+2026-03-19 16:49:08 [main] DEBUG c.e.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-03-19 16:49:08 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2026-03-19 16:49:08 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 16:49:08 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - Started CityNoiseSystemApplication in 1.839 seconds (process running for 2.016)
+2026-03-19 16:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 16:50:00 [scheduling-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 16:50:00 [scheduling-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d47fee5
+2026-03-19 16:50:00 [scheduling-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 16:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 16:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 16:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 16:50:00 CST 2026
+2026-03-19 16:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 16:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 16:50:14 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 16:50:14 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 16:50:14 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-19 16:50:14 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:50:14 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:50:14 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/map-points
+2026-03-19 16:50:14 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/map-points
+2026-03-19 16:50:14 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:50:14 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:50:16 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:50:16 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:50:16 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:50:16 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:50:16 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:50:16 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:50:16 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:50:16 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:50:17 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:50:17 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:50:18 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:50:18 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:53:26 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:53:26 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:53:27 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:53:27 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:53:27 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:53:27 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:53:27 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:53:27 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:53:27 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:53:27 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:53:27 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:53:27 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:53:27 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:53:27 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:53:27 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:53:27 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:53:59 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/users
+2026-03-19 16:53:59 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/users
+2026-03-19 16:54:00 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 16:54:00 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 16:54:01 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/tasks/monitor
+2026-03-19 16:54:01 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/workers
+2026-03-19 16:54:01 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/tasks/monitor
+2026-03-19 16:54:01 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/workers
+2026-03-19 16:54:20 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 16:54:20 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 16:54:22 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/users
+2026-03-19 16:54:22 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/users
+2026-03-19 16:54:29 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/workers
+2026-03-19 16:54:29 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/tasks/monitor
+2026-03-19 16:54:29 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/workers
+2026-03-19 16:54:29 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/tasks/monitor
+2026-03-19 16:54:31 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/workers
+2026-03-19 16:54:31 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/tasks/monitor
+2026-03-19 16:54:31 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/tasks/monitor
+2026-03-19 16:54:31 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/workers
+2026-03-19 16:54:31 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:54:31 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/standards
+2026-03-19 16:54:31 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:54:31 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/standards
+2026-03-19 16:54:32 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/map-points
+2026-03-19 16:54:32 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:54:32 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:54:32 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/map-points
+2026-03-19 16:54:32 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:54:32 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:54:33 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/map-points
+2026-03-19 16:54:33 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:54:33 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:54:33 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:54:33 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:54:33 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/map-points
+2026-03-19 16:54:33 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/tasks/monitor
+2026-03-19 16:54:33 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/workers
+2026-03-19 16:54:33 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/tasks/monitor
+2026-03-19 16:54:33 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/workers
+2026-03-19 16:54:39 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:54:39 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:54:39 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:54:39 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:54:39 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:54:39 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:54:39 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:54:39 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:54:43 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:54:43 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:54:43 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:54:43 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:54:43 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:54:43 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:54:43 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:54:43 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:54:43 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:54:43 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:54:45 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 16:54:45 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 16:54:45 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 16:54:45 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 16:54:45 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:54:45 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:54:45 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:54:45 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:54:45 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:54:45 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:54:47 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:54:47 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:54:47 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:54:47 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:54:47 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:54:47 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:54:47 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:54:47 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:54:47 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:54:47 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:54:47 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:54:47 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 16:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 16:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 16:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 16:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 16:55:00 CST 2026
+2026-03-19 16:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 16:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 16:58:16 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:58:16 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:58:16 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:58:16 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:58:16 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:58:16 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:58:16 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:58:16 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:58:44 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:58:44 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 16:58:44 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:58:44 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 16:58:44 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:58:44 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 16:58:44 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:58:44 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 16:59:14 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:59:14 [http-nio-8080-exec-3] WARN  c.e.c.filter.JwtAuthenticationFilter - Token已过期或无效: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUkVTSURFTlQiLCJ1c2VySWQiOjQsInVzZXJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzIwMDk5ODgsImV4cCI6MTc3MjA5NjM4OH0.42qrQdP8wR_sNLgE_MUmUlHiWA0A7eg2ThWOjHirEPA
+2026-03-19 16:59:14 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 16:59:14 [http-nio-8080-exec-4] WARN  c.e.c.filter.JwtAuthenticationFilter - Token已过期或无效: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUkVTSURFTlQiLCJ1c2VySWQiOjQsInVzZXJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzIwMDk5ODgsImV4cCI6MTc3MjA5NjM4OH0.42qrQdP8wR_sNLgE_MUmUlHiWA0A7eg2ThWOjHirEPA
+2026-03-19 16:59:14 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 16:59:14 [http-nio-8080-exec-8] WARN  c.e.c.filter.JwtAuthenticationFilter - Token已过期或无效: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUkVTSURFTlQiLCJ1c2VySWQiOjQsInVzZXJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzIwMDk5ODgsImV4cCI6MTc3MjA5NjM4OH0.42qrQdP8wR_sNLgE_MUmUlHiWA0A7eg2ThWOjHirEPA
+2026-03-19 16:59:14 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 16:59:14 [http-nio-8080-exec-9] WARN  c.e.c.filter.JwtAuthenticationFilter - Token已过期或无效: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUkVTSURFTlQiLCJ1c2VySWQiOjQsInVzZXJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzIwMDk5ODgsImV4cCI6MTc3MjA5NjM4OH0.42qrQdP8wR_sNLgE_MUmUlHiWA0A7eg2ThWOjHirEPA
+2026-03-19 16:59:14 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 16:59:14 [http-nio-8080-exec-2] WARN  c.e.c.filter.JwtAuthenticationFilter - Token已过期或无效: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUkVTSURFTlQiLCJ1c2VySWQiOjQsInVzZXJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzIwMDk5ODgsImV4cCI6MTc3MjA5NjM4OH0.42qrQdP8wR_sNLgE_MUmUlHiWA0A7eg2ThWOjHirEPA
+2026-03-19 16:59:14 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 16:59:14 [http-nio-8080-exec-10] WARN  c.e.c.filter.JwtAuthenticationFilter - Token已过期或无效: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUkVTSURFTlQiLCJ1c2VySWQiOjQsInVzZXJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzIwMDk5ODgsImV4cCI6MTc3MjA5NjM4OH0.42qrQdP8wR_sNLgE_MUmUlHiWA0A7eg2ThWOjHirEPA
+2026-03-19 17:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 17:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 17:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 17:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 17:00:00 CST 2026
+2026-03-19 17:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 17:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 17:00:26 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 17:00:26 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 17:00:26 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 17:00:26 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 17:00:26 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 17:00:26 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 17:00:26 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 17:00:26 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 17:00:26 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 17:00:26 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 17:00:26 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 17:00:26 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 17:00:28 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 17:00:28 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/standards
+2026-03-19 17:00:28 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 17:00:28 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/standards
+2026-03-19 17:00:28 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 17:00:28 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 17:00:29 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 17:00:29 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 17:00:29 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 17:00:29 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 17:00:29 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 17:00:29 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 17:00:43 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 17:00:43 [http-nio-8080-exec-7] WARN  c.e.c.filter.JwtAuthenticationFilter - Token已过期或无效: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUkVTSURFTlQiLCJ1c2VySWQiOjQsInVzZXJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzIwMDk5ODgsImV4cCI6MTc3MjA5NjM4OH0.42qrQdP8wR_sNLgE_MUmUlHiWA0A7eg2ThWOjHirEPA
+2026-03-19 17:00:43 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 17:00:43 [http-nio-8080-exec-6] WARN  c.e.c.filter.JwtAuthenticationFilter - Token已过期或无效: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUkVTSURFTlQiLCJ1c2VySWQiOjQsInVzZXJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzIwMDk5ODgsImV4cCI6MTc3MjA5NjM4OH0.42qrQdP8wR_sNLgE_MUmUlHiWA0A7eg2ThWOjHirEPA
+2026-03-19 17:00:43 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 17:00:43 [http-nio-8080-exec-3] WARN  c.e.c.filter.JwtAuthenticationFilter - Token已过期或无效: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUkVTSURFTlQiLCJ1c2VySWQiOjQsInVzZXJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzIwMDk5ODgsImV4cCI6MTc3MjA5NjM4OH0.42qrQdP8wR_sNLgE_MUmUlHiWA0A7eg2ThWOjHirEPA
+2026-03-19 17:00:43 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 17:00:43 [http-nio-8080-exec-4] WARN  c.e.c.filter.JwtAuthenticationFilter - Token已过期或无效: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUkVTSURFTlQiLCJ1c2VySWQiOjQsInVzZXJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzIwMDk5ODgsImV4cCI6MTc3MjA5NjM4OH0.42qrQdP8wR_sNLgE_MUmUlHiWA0A7eg2ThWOjHirEPA
+2026-03-19 17:00:43 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 17:00:43 [http-nio-8080-exec-9] WARN  c.e.c.filter.JwtAuthenticationFilter - Token已过期或无效: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUkVTSURFTlQiLCJ1c2VySWQiOjQsInVzZXJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzIwMDk5ODgsImV4cCI6MTc3MjA5NjM4OH0.42qrQdP8wR_sNLgE_MUmUlHiWA0A7eg2ThWOjHirEPA
+2026-03-19 17:00:43 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 17:00:43 [http-nio-8080-exec-8] WARN  c.e.c.filter.JwtAuthenticationFilter - Token已过期或无效: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUkVTSURFTlQiLCJ1c2VySWQiOjQsInVzZXJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzIwMDk5ODgsImV4cCI6MTc3MjA5NjM4OH0.42qrQdP8wR_sNLgE_MUmUlHiWA0A7eg2ThWOjHirEPA
+2026-03-19 17:01:17 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/monitor-stations
+2026-03-19 17:01:17 [http-nio-8080-exec-2] WARN  c.e.c.filter.JwtAuthenticationFilter - 请求缺少Authorization头: /api/common/monitor-stations
+2026-03-19 17:01:17 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 17:01:17 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 17:01:18 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 17:01:18 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 17:01:18 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 17:01:18 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 17:01:18 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 17:01:18 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 17:01:18 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 17:01:18 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 17:01:20 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 17:01:20 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 17:01:20 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 17:01:20 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 17:01:20 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 17:01:20 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 17:01:20 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 17:01:20 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 17:04:58 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/monitor-stations
+2026-03-19 17:04:58 [http-nio-8080-exec-2] WARN  c.e.c.filter.JwtAuthenticationFilter - 请求缺少Authorization头: /api/common/monitor-stations
+2026-03-19 17:04:58 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 17:04:58 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 17:04:59 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 17:04:59 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 17:04:59 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 17:04:59 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 17:04:59 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 17:04:59 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 17:04:59 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 17:04:59 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 17:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 17:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 17:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 17:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 17:05:00 CST 2026
+2026-03-19 17:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 17:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 17:05:05 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 17:05:05 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/standards
+2026-03-19 17:05:05 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/standards
+2026-03-19 17:05:05 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 17:05:07 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 17:05:07 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 17:05:07 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 17:05:07 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 17:05:07 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 17:05:07 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 17:05:07 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 17:05:07 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 17:05:08 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/standards
+2026-03-19 17:05:08 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 17:05:08 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 17:05:08 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/standards
+2026-03-19 17:05:12 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/map-points
+2026-03-19 17:05:12 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 17:05:12 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 17:05:12 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/map-points
+2026-03-19 17:05:12 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 17:05:12 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 17:05:17 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 17:05:17 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 17:05:19 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 17:05:19 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 17:05:19 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 17:05:19 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 17:05:19 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 17:05:19 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 17:05:19 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 17:05:19 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 17:05:32 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/workers
+2026-03-19 17:05:32 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/tasks/monitor
+2026-03-19 17:05:32 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/tasks/monitor
+2026-03-19 17:05:32 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/workers
+2026-03-19 17:05:39 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/users
+2026-03-19 17:05:39 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/users
+2026-03-19 17:05:41 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 17:05:41 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 17:05:41 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 17:05:41 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 17:05:41 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 17:05:41 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 17:05:41 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 17:05:41 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 17:05:45 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/users
+2026-03-19 17:05:45 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/users
+2026-03-19 17:05:46 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 17:05:46 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 17:05:47 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/workers
+2026-03-19 17:05:47 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/tasks/monitor
+2026-03-19 17:05:47 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/workers
+2026-03-19 17:05:47 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/tasks/monitor
+2026-03-19 17:05:47 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 17:05:47 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 17:05:48 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/tasks/monitor
+2026-03-19 17:05:48 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/workers
+2026-03-19 17:05:48 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/tasks/monitor
+2026-03-19 17:05:48 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/workers
+2026-03-19 17:07:08 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 17:07:08 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 17:07:08 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 17:07:08 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 17:07:08 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 17:07:08 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 17:07:08 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 17:07:08 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 17:07:13 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/workers
+2026-03-19 17:07:13 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/tasks/monitor
+2026-03-19 17:07:13 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/tasks/monitor
+2026-03-19 17:07:13 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/workers
+2026-03-19 17:07:16 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 17:07:16 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 17:07:21 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/tasks/monitor
+2026-03-19 17:07:21 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/workers
+2026-03-19 17:07:21 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/tasks/monitor
+2026-03-19 17:07:21 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/workers
+2026-03-19 17:07:24 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 17:07:24 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 17:07:28 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/auth/me
+2026-03-19 17:07:28 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/auth/me
+2026-03-19 17:07:28 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/4
+2026-03-19 17:07:28 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/4
+2026-03-19 17:07:28 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /uploads/20260318_205612_ff6499f2.png
+2026-03-19 17:07:28 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 白名单路径，跳过认证: /uploads/20260318_205612_ff6499f2.png
+2026-03-19 17:07:40 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: POST /api/auth/login
+2026-03-19 17:07:40 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 白名单路径，跳过认证: /api/auth/login
+2026-03-19 17:07:40 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 17:07:40 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: worker1 (ID: 2, 角色: WORKER) 访问 /api/notification/unread-count
+2026-03-19 17:07:40 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/worker/tasks
+2026-03-19 17:07:40 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: worker1 (ID: 2, 角色: WORKER) 访问 /api/worker/tasks
+2026-03-19 17:07:40 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 17:07:40 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: worker1 (ID: 2, 角色: WORKER) 访问 /api/notification/unread-count
+2026-03-19 17:07:42 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/list
+2026-03-19 17:07:42 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: worker1 (ID: 2, 角色: WORKER) 访问 /api/notification/list
+2026-03-19 17:07:43 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: POST /api/notification/33/read
+2026-03-19 17:07:43 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: worker1 (ID: 2, 角色: WORKER) 访问 /api/notification/33/read
+2026-03-19 17:07:43 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 17:07:43 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: worker1 (ID: 2, 角色: WORKER) 访问 /api/notification/unread-count
+2026-03-19 17:07:44 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/auth/me
+2026-03-19 17:07:44 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: worker1 (ID: 2, 角色: WORKER) 访问 /api/auth/me
+2026-03-19 17:07:44 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/4
+2026-03-19 17:07:44 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: worker1 (ID: 2, 角色: WORKER) 访问 /api/complaint/4
+2026-03-19 17:07:48 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: POST /api/worker/history
+2026-03-19 17:07:48 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: worker1 (ID: 2, 角色: WORKER) 访问 /api/worker/history
+2026-03-19 17:07:49 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/worker/tasks
+2026-03-19 17:07:49 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: worker1 (ID: 2, 角色: WORKER) 访问 /api/worker/tasks
+2026-03-19 17:07:50 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: POST /api/worker/task/4/start
+2026-03-19 17:07:50 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: worker1 (ID: 2, 角色: WORKER) 访问 /api/worker/task/4/start
+2026-03-19 17:07:51 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/worker/tasks
+2026-03-19 17:07:51 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: worker1 (ID: 2, 角色: WORKER) 访问 /api/worker/tasks
+2026-03-19 17:07:57 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: POST /api/worker/history
+2026-03-19 17:07:57 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: worker1 (ID: 2, 角色: WORKER) 访问 /api/worker/history
+2026-03-19 17:08:02 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: POST /api/auth/login
+2026-03-19 17:08:02 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 白名单路径，跳过认证: /api/auth/login
+2026-03-19 17:08:02 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 17:08:02 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 17:08:02 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 17:08:02 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 17:08:02 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 17:08:02 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 17:08:02 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 17:08:02 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 17:08:05 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 17:08:05 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 17:08:05 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 17:08:05 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 17:08:05 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 17:08:05 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 17:08:05 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 17:08:05 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 17:10:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 17:10:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 17:10:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 17:10:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 17:10:00 CST 2026
+2026-03-19 17:10:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 17:10:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 17:15:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 17:15:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 17:15:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 17:15:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 17:15:00 CST 2026
+2026-03-19 17:15:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 17:15:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 17:20:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 17:20:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 17:20:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 17:20:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 17:20:00 CST 2026
+2026-03-19 17:20:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 17:20:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 17:25:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 17:25:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 17:25:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 17:25:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 17:25:00 CST 2026
+2026-03-19 17:25:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 17:25:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 17:30:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 17:30:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 17:30:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 17:30:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 17:30:00 CST 2026
+2026-03-19 17:30:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 17:30:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 17:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 17:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 17:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 17:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 17:35:00 CST 2026
+2026-03-19 17:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 17:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 17:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 17:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 17:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 17:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 17:40:00 CST 2026
+2026-03-19 17:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 17:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 17:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 17:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 17:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 17:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 17:45:00 CST 2026
+2026-03-19 17:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 17:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 17:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 17:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 17:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 17:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 17:50:00 CST 2026
+2026-03-19 17:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 17:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 17:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 17:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 17:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 17:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 17:55:00 CST 2026
+2026-03-19 17:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 17:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 18:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 18:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 18:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 18:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 18:00:00 CST 2026
+2026-03-19 18:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 18:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 18:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 18:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 18:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 18:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 18:05:00 CST 2026
+2026-03-19 18:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 18:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 18:10:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 18:10:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 18:10:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 18:10:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 18:10:00 CST 2026
+2026-03-19 18:10:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 18:10:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 18:15:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 18:15:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 18:15:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 18:15:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 18:15:00 CST 2026
+2026-03-19 18:15:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 18:15:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 18:20:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 18:20:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 18:20:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 18:20:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 18:20:00 CST 2026
+2026-03-19 18:20:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 18:20:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 18:25:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 18:25:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 18:25:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 18:25:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 18:25:00 CST 2026
+2026-03-19 18:25:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 18:25:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 18:30:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 18:30:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 18:30:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 18:30:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 18:30:00 CST 2026
+2026-03-19 18:30:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 18:30:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 18:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 18:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 18:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 18:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 18:35:00 CST 2026
+2026-03-19 18:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 18:35:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 18:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 18:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 18:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 18:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 18:40:00 CST 2026
+2026-03-19 18:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 18:40:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 18:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 18:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 18:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 18:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 18:45:00 CST 2026
+2026-03-19 18:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 18:45:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 18:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 18:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 18:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 18:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 18:50:00 CST 2026
+2026-03-19 18:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 18:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 18:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 18:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 18:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 18:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 18:55:00 CST 2026
+2026-03-19 18:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 18:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 20:48:32 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - Starting CityNoiseSystemApplication using Java 17.0.13 with PID 10192 (D:\APP\project\new\city_noise_system\target\classes started by PSW in D:\APP\project\new\city_noise_system)
+2026-03-19 20:48:32 [main] DEBUG c.e.city_noise_system.CityNoiseSystemApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2026-03-19 20:48:32 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 20:48:33 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2026-03-19 20:48:33 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.city_noise_system.mapper]' package. Please check your configuration.
+2026-03-19 20:48:33 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 20:48:33 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 20:48:33 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-03-19 20:48:33 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-19 20:48:33 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 855 ms
+2026-03-19 20:48:34 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2026-03-19 20:48:34 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 20:48:34 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - Started CityNoiseSystemApplication in 1.995 seconds (process running for 2.305)
+2026-03-19 20:48:38 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 20:48:38 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 20:48:38 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-19 20:49:07 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 20:49:07 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 20:49:21 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - Starting CityNoiseSystemApplication using Java 17.0.13 with PID 13932 (D:\APP\project\new\city_noise_system\target\classes started by PSW in D:\APP\project\new\city_noise_system)
+2026-03-19 20:49:21 [main] DEBUG c.e.city_noise_system.CityNoiseSystemApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2026-03-19 20:49:21 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 20:49:21 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2026-03-19 20:49:22 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 20:49:22 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 20:49:22 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-03-19 20:49:22 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-19 20:49:22 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 860 ms
+2026-03-19 20:49:22 [main] DEBUG c.e.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-03-19 20:49:22 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2026-03-19 20:49:23 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 20:49:23 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - Started CityNoiseSystemApplication in 2.156 seconds (process running for 2.339)
+2026-03-19 20:49:25 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 20:49:25 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 20:49:25 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-03-19 20:49:25 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: POST /api/auth/login
+2026-03-19 20:49:25 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 白名单路径，跳过认证: /api/auth/login
+2026-03-19 20:49:25 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 20:49:25 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58237c70
+2026-03-19 20:49:25 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 20:49:25 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 20:49:25 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 20:49:25 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 20:49:25 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 20:49:25 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 20:49:25 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 20:49:25 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/notification/unread-count
+2026-03-19 20:49:25 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/notification/unread-count
+2026-03-19 20:49:27 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 20:49:27 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 20:49:29 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/auth/me
+2026-03-19 20:49:29 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/auth/me
+2026-03-19 20:49:29 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/4
+2026-03-19 20:49:29 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/4
+2026-03-19 20:49:29 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /uploads/20260318_205612_ff6499f2.png
+2026-03-19 20:49:29 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 白名单路径，跳过认证: /uploads/20260318_205612_ff6499f2.png
+2026-03-19 20:49:30 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 20:49:30 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 20:49:32 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/tasks/monitor
+2026-03-19 20:49:32 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/workers
+2026-03-19 20:49:32 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/tasks/monitor
+2026-03-19 20:49:32 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/workers
+2026-03-19 20:49:35 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/auth/me
+2026-03-19 20:49:35 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/auth/me
+2026-03-19 20:49:35 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/4
+2026-03-19 20:49:35 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/4
+2026-03-19 20:49:56 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/workers
+2026-03-19 20:49:56 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/tasks/monitor
+2026-03-19 20:49:56 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/workers
+2026-03-19 20:49:56 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/tasks/monitor
+2026-03-19 20:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 20:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 20:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 20:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 20:50:00 CST 2026
+2026-03-19 20:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 20:50:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 20:50:00 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/auth/me
+2026-03-19 20:50:00 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/auth/me
+2026-03-19 20:50:00 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/4
+2026-03-19 20:50:00 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/4
+2026-03-19 20:50:02 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints
+2026-03-19 20:50:02 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints
+2026-03-19 20:50:02 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/workers
+2026-03-19 20:50:02 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/tasks/monitor
+2026-03-19 20:50:02 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/tasks/monitor
+2026-03-19 20:50:02 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/workers
+2026-03-19 20:50:04 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/auth/me
+2026-03-19 20:50:04 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/auth/me
+2026-03-19 20:50:04 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/1
+2026-03-19 20:50:04 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/1
+2026-03-19 20:50:04 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /uploads/20260226_133607_43254c85.png
+2026-03-19 20:50:04 [http-nio-8080-exec-5] DEBUG c.e.c.filter.JwtAuthenticationFilter - 白名单路径，跳过认证: /uploads/20260226_133607_43254c85.png
+2026-03-19 20:50:15 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/common/districts
+2026-03-19 20:50:15 [http-nio-8080-exec-2] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/common/districts
+2026-03-19 20:50:15 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/statistics
+2026-03-19 20:50:15 [http-nio-8080-exec-6] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/statistics
+2026-03-19 20:50:15 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/district-stats
+2026-03-19 20:50:15 [http-nio-8080-exec-7] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/district-stats
+2026-03-19 20:50:15 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/admin/complaints/noise-type-stats
+2026-03-19 20:50:15 [http-nio-8080-exec-8] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/admin/complaints/noise-type-stats
+2026-03-19 20:50:18 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 20:50:18 [http-nio-8080-exec-9] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 20:50:18 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 20:50:18 [http-nio-8080-exec-4] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 20:50:38 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/complaint/map-points
+2026-03-19 20:50:38 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/over-standard
+2026-03-19 20:50:38 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 处理请求: GET /api/monitor/map-points
+2026-03-19 20:50:38 [http-nio-8080-exec-10] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/complaint/map-points
+2026-03-19 20:50:38 [http-nio-8080-exec-3] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/over-standard
+2026-03-19 20:50:38 [http-nio-8080-exec-1] DEBUG c.e.c.filter.JwtAuthenticationFilter - 用户认证通过: admin (ID: 1, 角色: ADMIN) 访问 /api/monitor/map-points
+2026-03-19 20:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 20:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 20:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 20:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 20:55:00 CST 2026
+2026-03-19 20:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 20:55:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 20:56:47 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - Starting CityNoiseSystemApplication using Java 17.0.13 with PID 21372 (D:\APP\project\new\city_noise_system\target\classes started by PSW in D:\APP\project\new\city_noise_system)
+2026-03-19 20:56:47 [main] DEBUG c.e.city_noise_system.CityNoiseSystemApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2026-03-19 20:56:47 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 20:56:47 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2026-03-19 20:56:48 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 20:56:48 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 20:56:48 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-03-19 20:56:48 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-19 20:56:48 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 948 ms
+2026-03-19 20:56:48 [main] DEBUG c.e.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-03-19 20:56:48 [main] DEBUG c.b.m.e.spring.MybatisSqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2026-03-19 20:56:49 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 20:56:49 [main] INFO  c.e.city_noise_system.CityNoiseSystemApplication - Started CityNoiseSystemApplication in 2.22 seconds (process running for 2.445)
+2026-03-19 21:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 21:00:00 [scheduling-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 21:00:00 [scheduling-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@332df1f0
+2026-03-19 21:00:00 [scheduling-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 21:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 21:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 21:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 21:00:00 CST 2026
+2026-03-19 21:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 21:00:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
+2026-03-19 21:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 开始生成实时模拟数据...
+2026-03-19 21:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 标准缓存初始化完成，共 5 个功能区标准
+2026-03-19 21:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 找到 30 个监测点，生成实时数据
+2026-03-19 21:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 生成数据时间: Thu Mar 19 21:05:00 CST 2026
+2026-03-19 21:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 批量保存 30 条数据成功
+2026-03-19 21:05:00 [scheduling-1] INFO  c.e.city_noise_system.utils.SimulatedDataGenerator - 实时模拟数据生成完成，共生成 30 条数据
