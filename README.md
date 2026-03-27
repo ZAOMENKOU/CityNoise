@@ -325,28 +325,6 @@ city_noise_system/
 - **后端**: JDK 8+，MySQL 5.7+
 - **服务器**: 支持Java和静态文件服务
 
-## 系统截图
-
-### 1. 登录页面
-
-!\[登录页面]\(https\://trae-api-cn.mchost.guru/api/ide/v1/text\_to\_image?prompt=modern%20login%20page%20for%20city%20noise%20system%2C%20clean%20design%2C%20blue%20theme%2C%20responsive%20layout\&image\_size=square null)
-
-### 2. 投诉提交页面
-
-!\[投诉提交页面]\(https\://trae-api-cn.mchost.guru/api/ide/v1/text\_to\_image?prompt=complaint%20submission%20page%20with%20map%20and%20form%2C%20split%20layout%2C%20blue%20theme%2C%20modern%20design\&image\_size=landscape\_16\_9 null)
-
-### 3. 投诉列表页面
-
-!\[投诉列表页面]\(https\://trae-api-cn.mchost.guru/api/ide/v1/text\_to\_image?prompt=complaint%20list%20page%20with%20data%20table%2C%20filters%2C%20modern%20UI%2C%20blue%20theme\&image\_size=landscape\_16\_9 null)
-
-### 4. 噪音地图页面
-
-!\[噪音地图页面]\(https\://trae-api-cn.mchost.guru/api/ide/v1/text\_to\_image?prompt=noise%20complaint%20map%20visualization%2C%20markers%20on%20map%2C%20modern%20UI%2C%20blue%20theme\&image\_size=landscape\_16\_9 null)
-
-### 5. 管理员统计页面
-
-!\[管理员统计页面]\(https\://trae-api-cn.mchost.guru/api/ide/v1/text\_to\_image?prompt=admin%20dashboard%20with%20statistics%20charts%2C%20modern%20UI%2C%20blue%20theme%2C%20data%20visualization\&image\_size=landscape\_16\_9 null)
-
 ## 项目亮点
 
 1. **完整的前后端分离架构**：采用Vue 3 + Spring Boot的现代技术栈，实现了清晰的前后端分离
