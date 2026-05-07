@@ -1,6 +1,21 @@
 <template>
   <div class="noise-quality-container">
-    <h2>声环境质量实时数据</h2>
+    <div class="page-header">
+      <h2>声环境质量实时数据</h2>
+      <div class="header-actions">
+        <el-button 
+          v-if="isAdmin"
+          type="warning" 
+          size="default" 
+          @click="handleRefreshData"
+          :loading="refreshing"
+          class="refresh-btn"
+        >
+          <el-icon><Refresh /></el-icon>
+          手动更新数据
+        </el-button>
+      </div>
+    </div>
     
     <div class="card-grid">
       <!-- 地图卡片 -->
@@ -94,7 +109,8 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { ElMessage } from 'element-plus'
+import { ElMessage, ElMessageBox } from 'element-plus'
+import { Refresh } from '@element-plus/icons-vue'
 import { monitorApi } from '@/services/api/monitor'
 
 const mapContainer = ref()
@@ -103,6 +119,8 @@ let monitorMarkers = []
 let pulseAnimations = []
 
 const loading = ref(false)
+const refreshing = ref(false)
+const isAdmin = ref(false)
 const monitorData = ref([])
 const currentTime = ref('')
 const latestDataTime = ref('')
@@ -731,8 +749,71 @@ const addPulseAnimation = (point, baseRadius, isSelected = false) => {
   return centerCircle
 }
 
+// 手动刷新数据（清空历史数据并重新生成）
+const handleRefreshData = async () => {
+  try {
+    // 确认对话框
+    await ElMessageBox.confirm(
+      '此操作将清空所有历史监测数据并重新生成最新数据，确定继续吗？',
+      '操作确认',
+      {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning',
+        center: true
+      }
+    )
+    
+    refreshing.value = true
+    
+    // 步骤1：清空现有模拟数据
+    const clearResponse = await fetch('/api/monitor/clear-data', {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+    const clearResult = await clearResponse.json()
+    
+    if (clearResult.code !== 200) {
+      throw new Error(clearResult.message || '清空数据失败')
+    }
+    
+    // 步骤2：生成新的模拟数据
+    const generateResponse = await fetch('/api/monitor/generate-data', {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+    const generateResult = await generateResponse.json()
+    
+    if (generateResult.code !== 200) {
+      throw new Error(generateResult.message || '生成数据失败')
+    }
+    
+    // 步骤3：刷新页面数据
+    await fetchMonitorData()
+    
+    ElMessage.success('数据更新成功！')
+  } catch (error) {
+    if (error !== 'cancel') {
+      ElMessage.error(error.message || '数据更新失败')
+    }
+  } finally {
+    refreshing.value = false
+  }
+}
+
+// 检查用户角色
+const checkUserRole = () => {
+  const userInfo = JSON.parse(localStorage.getItem('userInfo') || '{}')
+  isAdmin.value = userInfo.role === 'ADMIN'
+}
+
 // 初始化
 onMounted(() => {
+  checkUserRole()
   initCurrentTime()
   loadBaiduMapScript()
   fetchMonitorData()
@@ -747,14 +828,45 @@ onMounted(() => {
   min-height: calc(100vh - var(--header-height));
 }
 
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #409EFF;
+}
+
 .noise-quality-container h2 {
   font-size: 24px;
   font-weight: 600;
   color: #303133;
-  margin-bottom: 24px;
-  text-align: center;
-  padding-bottom: 16px;
-  border-bottom: 2px solid #409EFF;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.refresh-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.refresh-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 108, 108, 0.3);
+}
+
+.refresh-btn:active {
+  transform: translateY(0);
 }
 
 .card-grid {

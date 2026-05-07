@@ -2,7 +2,7 @@
   <div class="page-container">
     <div class="content-wrapper">
       <h2 class="page-title">提交问题反馈</h2>
-      
+
       <div class="main-container">
         <!-- 左侧地图区域 -->
         <div class="map-container-wrapper">
@@ -12,15 +12,15 @@
           <div class="map-container" ref="mapContainer"></div>
           <div class="map-footer">
             <div class="coordinate-inputs">
-              <el-input 
-                v-model="latitudeInput" 
-                placeholder="纬度" 
+              <el-input
+                v-model="latitudeInput"
+                placeholder="纬度"
                 size="small"
                 @input="handleCoordinateInput"
               ></el-input>
-              <el-input 
-                v-model="longitudeInput" 
-                placeholder="经度" 
+              <el-input
+                v-model="longitudeInput"
+                placeholder="经度"
                 size="small"
                 @input="handleCoordinateInput"
               ></el-input>
@@ -63,11 +63,11 @@
                 <el-option label="工业噪音" value="INDUSTRIAL"></el-option>
               </el-select>
             </el-form-item>
-            
+
             <el-form-item label="详细描述" prop="description" class="form-item">
-              <el-input 
-                type="textarea" 
-                v-model="form.description" 
+              <el-input
+                type="textarea"
+                v-model="form.description"
                 placeholder="请详细描述问题..."
                 :rows="4"
                 maxlength="500"
@@ -75,7 +75,7 @@
                 class="textarea"
               ></el-input>
             </el-form-item>
-            
+
             <el-form-item label="上传图片" prop="images" class="form-item">
               <el-upload
                 class="upload-area"
@@ -101,8 +101,8 @@
                     fit="cover"
                     class="preview-image"
                   ></el-image>
-                  <el-button 
-                    type="text" 
+                  <el-button
+                    type="text"
                     class="preview-remove"
                     @click="removeFile(file)"
                   >
@@ -111,11 +111,11 @@
                 </div>
               </div>
             </el-form-item>
-            
+
             <el-form-item class="form-item submit-item">
-              <el-button 
-                type="primary" 
-                class="submit-btn" 
+              <el-button
+                type="primary"
+                class="submit-btn"
                 @click="submitForm"
                 :disabled="!isFormValid"
                 :loading="isSubmitting"
@@ -231,7 +231,7 @@ const loadBaiduMapScript = () => {
   script.async = true
   script.defer = true
   document.head.appendChild(script)
-  
+
   // 全局回调函数
   window.initMap = initMap
 }
@@ -243,9 +243,9 @@ const isProcessing = ref(false)
 // 处理地理编码队列
 const processGeocodeQueue = async () => {
   if (isProcessing.value || geocodeQueue.length === 0) return
-  
+
   isProcessing.value = true
-  
+
   try {
     const task = geocodeQueue.shift()
     await task()
@@ -262,22 +262,22 @@ const processGeocodeQueue = async () => {
 const initMap = () => {
   // 创建地图实例
   map = new BMap.Map(mapContainer.value)
-  
+
   // 设置中心点和缩放级别
   const point = new BMap.Point(selectedLongitude.value, selectedLatitude.value)
   map.centerAndZoom(point, 11)
-  
+
   // 添加控件
   map.addControl(new BMap.NavigationControl())
   map.addControl(new BMap.ScaleControl())
   map.addControl(new BMap.OverviewMapControl())
-  
+
   // 启用滚轮缩放
   map.enableScrollWheelZoom(true)
-  
+
   // 添加点击事件
   map.addEventListener('click', handleMapClick)
-  
+
   // 添加初始标记
   updateMarker()
 }
@@ -286,7 +286,7 @@ const initMap = () => {
 const handleMapClick = (e) => {
   selectedLongitude.value = e.point.lng
   selectedLatitude.value = e.point.lat
-  
+
   // 将地理编码任务加入队列
   geocodeQueue.push(() => {
     return new Promise((resolve) => {
@@ -303,7 +303,7 @@ const handleMapClick = (e) => {
       })
     })
   })
-  
+
   // 开始处理队列
   processGeocodeQueue()
 }
@@ -311,12 +311,12 @@ const handleMapClick = (e) => {
 // 更新地图标记
 const updateMarker = () => {
   if (!map) return
-  
+
   // 移除旧标记
   if (marker) {
     map.removeOverlay(marker)
   }
-  
+
   // 添加新标记
   const point = new BMap.Point(selectedLongitude.value, selectedLatitude.value)
   marker = new BMap.Marker(point)
@@ -331,13 +331,13 @@ const handleFileChange = (file, files) => {
     ElMessage.error('最多上传 5 个文件')
     return false
   }
-  
+
   // 检查文件大小
   if (file.size > 5 * 1024 * 1024) {
     ElMessage.error('单个文件大小不能超过 5MB')
     return false
   }
-  
+
   // 检查文件类型
   const allowedTypes = ['.jpg', '.jpeg', '.png', '.gif', '.webp']
   const fileExtension = file.name.substring(file.name.lastIndexOf('.'))
@@ -345,7 +345,7 @@ const handleFileChange = (file, files) => {
     ElMessage.error('只支持上传 JPG、JPEG、PNG、GIF、WEBP 格式文件')
     return false
   }
-  
+
   // 更新文件列表（保持响应式）
   fileList.value = [...files]
   console.log('文件列表更新后:', fileList.value)
@@ -360,12 +360,12 @@ const handleFileRemove = (file, files) => {
 // 提交表单
 const submitForm = async () => {
   if (!formRef.value || isSubmitting.value) return
-  
+
   await formRef.value.validate(async (valid) => {
     if (valid) {
       try {
         isSubmitting.value = true
-        
+
         // 构建FormData，一次性提交所有数据
         const formData = new FormData()
         formData.append('title', '噪音投诉')
@@ -375,12 +375,12 @@ const submitForm = async () => {
         formData.append('latitude', form.latitude)
         formData.append('district', form.district)
         formData.append('detailAddress', form.detailAddress)
-        
+
         // 添加图片文件
         fileList.value.forEach(file => {
           formData.append('images', file.raw, file.name)
         })
-        
+
         // 发送请求创建投诉（包含文件）
         const response = await fetch('/api/complaint', {
           method: 'POST',
@@ -390,9 +390,9 @@ const submitForm = async () => {
           },
           body: formData
         })
-        
+
         const data = await response.json()
-        
+
         if (data.code === 200) {
           ElMessage.success('投诉提交成功！')
           // 跳转到投诉列表页面
@@ -415,11 +415,11 @@ const submitForm = async () => {
 const handleCoordinateInput = () => {
   const lat = parseFloat(latitudeInput.value)
   const lng = parseFloat(longitudeInput.value)
-  
+
   if (!isNaN(lat) && !isNaN(lng)) {
     selectedLatitude.value = lat
     selectedLongitude.value = lng
-    
+
     // 将地理编码任务加入队列
     geocodeQueue.push(() => {
       return new Promise((resolve) => {
@@ -437,16 +437,12 @@ const handleCoordinateInput = () => {
         })
       })
     })
-    
+
     // 开始处理队列
     processGeocodeQueue()
   }
 }
 
-// 返回
-const goBack = () => {
-  router.go(-1)
-}
 </script>
 
 <style scoped>
@@ -815,12 +811,12 @@ const goBack = () => {
   .content-wrapper {
     padding: 15px;
   }
-  
+
   .main-container {
     flex-direction: column;
     min-height: auto;
   }
-  
+
   .map-container-wrapper,
   .form-container {
     min-width: 100%;
@@ -828,7 +824,7 @@ const goBack = () => {
     min-height: 500px;
     max-height: none;
   }
-  
+
   .map-container {
     min-height: 400px;
   }
@@ -838,27 +834,27 @@ const goBack = () => {
   .content-wrapper {
     padding: 10px;
   }
-  
+
   .page-title {
     font-size: 20px;
     margin-bottom: 20px;
   }
-  
+
   .map-container-wrapper,
   .form-container {
     padding: 15px;
     min-height: 450px;
   }
-  
+
   .map-container {
     min-height: 350px;
   }
-  
+
   .address-line .address-label {
     width: 70px;
     font-size: 13px;
   }
-  
+
   .address-line .address-value {
     font-size: 13px;
   }
@@ -870,27 +866,27 @@ const goBack = () => {
     min-width: 100%;
     padding: 12px;
   }
-  
+
   .map-container {
     min-height: 300px;
   }
-  
+
   .form-container {
     min-height: 400px;
   }
-  
+
   .el-form-item {
     margin-bottom: 15px;
   }
-  
+
   .coordinate-inputs {
     flex-direction: column;
   }
-  
+
   .address-line {
     flex-direction: column;
   }
-  
+
   .address-line .address-label {
     margin-bottom: 4px;
   }

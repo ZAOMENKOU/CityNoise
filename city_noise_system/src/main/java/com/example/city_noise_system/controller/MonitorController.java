@@ -9,6 +9,7 @@ import com.example.city_noise_system.mapper.NoiseStandardMapper;
 import com.example.city_noise_system.utils.SimulatedDataGenerator;
 import com.example.city_noise_system.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -181,7 +182,7 @@ public class MonitorController {
             return ResultVO.error(500, "获取超标监测点失败: " + e.getMessage());
         }
     }
-    
+
     /**
      * 获取监测点最新数据
      * GET /api/monitor/data?stationId={stationId}
@@ -193,7 +194,7 @@ public class MonitorController {
             if (stationId == null) {
                 return ResultVO.error(400, "stationId不能为空");
             }
-            
+
             // 获取最新的监测数据
             List<MonitorData> latestData = monitorDataMapper.selectList(
                     new com.baomidou.mybatisplus.core.conditions.query.QueryWrapper<MonitorData>()
@@ -201,13 +202,13 @@ public class MonitorController {
                             .orderByDesc("monitor_time")
                             .last("LIMIT 10") // 获取最新的10条数据
             );
-            
+
             return ResultVO.success(latestData);
         } catch (Exception e) {
             return ResultVO.error(500, "获取监测点数据失败: " + e.getMessage());
         }
     }
-    
+
     /**
      * 获取监测点24小时数据
      * GET /api/monitor/hourly-data?stationId={stationId}
@@ -219,20 +220,19 @@ public class MonitorController {
             if (stationId == null) {
                 return ResultVO.error(400, "stationId不能为空");
             }
-            
+
             // 获取24小时数据
             List<MonitorData> hourlyData = monitorDataMapper.selectList(
                     new com.baomidou.mybatisplus.core.conditions.query.QueryWrapper<MonitorData>()
                             .eq("station_id", stationId)
                             .ge("monitor_time", "2026-02-22 16:00:00") // 模拟24小时前的数据
                             .le("monitor_time", "2026-02-23 16:00:00") // 模拟当前时间的数据
-                            .orderByAsc("monitor_time")
-            );
-            
+                            .orderByAsc("monitor_time"));
+
             // 构建响应数据
             List<String> hours = new ArrayList<>();
             List<Double> values = new ArrayList<>();
-            
+
             // 如果没有数据，生成模拟数据
             if (hourlyData.isEmpty()) {
                 // 生成24小时的模拟数据
@@ -242,7 +242,7 @@ public class MonitorController {
                         hour -= 24;
                     }
                     hours.add(String.format("%02d:00", hour));
-                    
+
                     // 生成合理的模拟数据
                     double baseValue = 50;
                     if (hour >= 0 && hour < 6) {
@@ -271,11 +271,11 @@ public class MonitorController {
                     values.add(data.getNoiseLevel().doubleValue());
                 }
             }
-            
+
             Map<String, Object> result = new HashMap<>();
             result.put("hours", hours);
             result.put("values", values);
-            
+
             return ResultVO.success(result);
         } catch (Exception e) {
             return ResultVO.error(500, "获取24小时数据失败: " + e.getMessage());
@@ -294,6 +294,21 @@ public class MonitorController {
             return ResultVO.success("模拟数据生成成功");
         } catch (Exception e) {
             return ResultVO.error(500, "生成模拟数据失败: " + e.getMessage());
+        }
+    }
+
+    /**
+     * 清空模拟数据
+     * DELETE /api/monitor/clear-data
+     * 仅清除monitor_data表中的模拟数据，不影响其他表
+     */
+    @DeleteMapping("/clear-data")
+    public ResultVO<?> clearSimulatedData() {
+        try {
+            simulatedDataGenerator.clearSimulatedData();
+            return ResultVO.success("模拟数据清空成功");
+        } catch (Exception e) {
+            return ResultVO.error(500, "清空模拟数据失败: " + e.getMessage());
         }
     }
 }
