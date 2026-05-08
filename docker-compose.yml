@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  # 数据库服务
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: city_noise_system
+      MYSQL_CHARSET: utf8mb4
+      MYSQL_COLLATION: utf8mb4_unicode_ci
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./city_noise_system/sql/cns.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
+    restart: always
+
+  # 后端服务
+  backend:
+    build:
+      context: ./city_noise_system
+      dockerfile: Dockerfile
+    container_name: city-noise-backend
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/city_noise_system?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 123456
+      JWT_SECRET: Y2l0eV9ub2lzZV9zeXN0ZW1fZGV2X3NlY3JldF9rZXlfMjAyNF8wMl8xNg==
+      BAIDU_MAP_AK: k0IOR3G2ZQIITi6uKju83p2bP5KPqTSz
+    volumes:
+      - backend-logs:/app/logs
+      - backend-uploads:/app/uploads
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    depends_on:
+      - mysql
+    restart: always
+
+  # 前端服务
+  frontend:
+    build:
+      context: ./city_noise_system_frontend
+      dockerfile: Dockerfile
+    container_name: city-noise-frontend
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+    depends_on:
+      - backend
+    restart: always
+
+# 网络配置
+networks:
+  app-network:
+    driver: bridge
+
+# 数据卷配置
+volumes:
+  mysql-data:
+    driver: local
+  backend-logs:
+    driver: local
+  backend-uploads:
+    driver: local
