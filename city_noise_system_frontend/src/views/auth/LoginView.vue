@@ -42,9 +42,11 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
+import { useUserStore } from '@/stores/user'
 
 const router = useRouter()
 const loading = ref(false)
+const userStore = useUserStore()
 
 const form = ref({
   username: '',
@@ -81,6 +83,9 @@ const handleLogin = async () => {
           // 登录成功，保存token
           localStorage.setItem('token', data.data.token)
           localStorage.setItem('userInfo', JSON.stringify(data.data.userInfo))
+          
+          // 更新 Pinia store
+          userStore.updateUserInfo(data.data.userInfo)
           
           ElMessage.success('登录成功！')
           // 根据用户角色跳转到不同页面

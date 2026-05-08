@@ -200,8 +200,10 @@
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { Bell, Monitor, Location, DataAnalysis, Check, User, DocumentChecked } from '@element-plus/icons-vue'
+import { useUserStore } from '@/stores/user'
 
 const router = useRouter()
+const userStore = useUserStore()
 
 // 引用
 const featuresSection = ref(null)
@@ -224,27 +226,22 @@ const handleFeatureClick = (path) => {
 const handleLoginClick = () => {
   if (isLoggedIn()) {
     // 已登录，根据用户角色跳转到相应页面
-    try {
-      const userInfo = JSON.parse(localStorage.getItem('userInfo'))
-      if (userInfo && userInfo.role) {
-        switch (userInfo.role) {
-          case 'ADMIN':
-            router.push('/app/dashboard')
-            break
-          case 'WORKER':
-            router.push('/app/worker/tasks')
-            break
-          case 'RESIDENT':
-            router.push('/app/complaint/submit')
-            break
-          default:
-            router.push('/app/dashboard')
-        }
-      } else {
-        router.push('/app/dashboard')
+    const role = userStore.userInfo?.role
+    if (role) {
+      switch (role) {
+        case 'ADMIN':
+          router.push('/app/dashboard')
+          break
+        case 'WORKER':
+          router.push('/app/worker/tasks')
+          break
+        case 'RESIDENT':
+          router.push('/app/complaint/submit')
+          break
+        default:
+          router.push('/app/dashboard')
       }
-    } catch (error) {
-      console.error('解析用户信息失败:', error)
+    } else {
       router.push('/app/dashboard')
     }
   } else {

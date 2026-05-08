@@ -137,6 +137,9 @@ import StatCard from '@/components/business/StatCard.vue'
 import LoadingSpinner from '@/components/common/LoadingSpinner.vue'
 import ErrorOverlay from '@/components/common/ErrorOverlay.vue'
 import StatusTag from '@/components/business/StatusTag.vue'
+import { useUserStore } from '@/stores/user'
+
+const userStore = useUserStore()
 
 const router = useRouter()
 
@@ -168,10 +171,10 @@ const formatTime = (timeString) => {
 
 // 查看全部投诉
 const viewAllComplaints = () => {
-  const userInfo = JSON.parse(localStorage.getItem('userInfo') || '{}')
-  if (userInfo.role === 'ADMIN') {
+  const role = userStore.userInfo?.role
+  if (role === 'ADMIN') {
     router.push('/app/admin/complaints')
-  } else if (userInfo.role === 'WORKER') {
+  } else if (role === 'WORKER') {
     router.push('/app/worker/tasks')
   } else {
     router.push('/app/complaint/list')
@@ -182,13 +185,13 @@ const viewAllComplaints = () => {
 const fetchStats = async () => {
   try {
     // 获取用户角色
-    const userInfo = JSON.parse(localStorage.getItem('userInfo') || '{}')
+    const role = userStore.userInfo?.role
     let apiUrl = ''
     
-    if (userInfo.role === 'ADMIN') {
+    if (role === 'ADMIN') {
       // 管理员获取完整统计数据
       apiUrl = '/api/admin/statistics'
-    } else if (userInfo.role === 'WORKER') {
+    } else if (role === 'WORKER') {
       // 处理人员获取任务统计
       apiUrl = '/api/worker/statistics'
     } else {
@@ -248,13 +251,13 @@ const fetchStats = async () => {
 const fetchRecentComplaints = async () => {
   try {
     // 获取用户角色
-    const userInfo = JSON.parse(localStorage.getItem('userInfo') || '{}')
+    const role = userStore.userInfo?.role
     let apiUrl = ''
     
-    if (userInfo.role === 'ADMIN') {
+    if (role === 'ADMIN') {
       // 管理员获取所有投诉
       apiUrl = '/api/admin/complaints?page=1&size=5'
-    } else if (userInfo.role === 'WORKER') {
+    } else if (role === 'WORKER') {
       // 处理人员获取分配的任务
       apiUrl = '/api/worker/tasks?page=1&size=5'
     } else {

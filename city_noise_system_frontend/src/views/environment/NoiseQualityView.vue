@@ -4,7 +4,7 @@
       <h2>声环境质量实时数据</h2>
       <div class="header-actions">
         <el-button 
-          v-if="isAdmin"
+          v-if="userStore.isAdmin"
           type="warning" 
           size="default" 
           @click="handleRefreshData"
@@ -112,15 +112,17 @@ import { ref, onMounted } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { Refresh } from '@element-plus/icons-vue'
 import { monitorApi } from '@/services/api/monitor'
+import { useUserStore } from '@/stores/user'
 
 const mapContainer = ref()
 let map = null
 let monitorMarkers = []
 let pulseAnimations = []
 
+const userStore = useUserStore()
+
 const loading = ref(false)
 const refreshing = ref(false)
-const isAdmin = ref(false)
 const monitorData = ref([])
 const currentTime = ref('')
 const latestDataTime = ref('')
@@ -805,15 +807,10 @@ const handleRefreshData = async () => {
   }
 }
 
-// 检查用户角色
-const checkUserRole = () => {
-  const userInfo = JSON.parse(localStorage.getItem('userInfo') || '{}')
-  isAdmin.value = userInfo.role === 'ADMIN'
-}
-
 // 初始化
 onMounted(() => {
-  checkUserRole()
+  // 确保从 localStorage 重新加载用户信息
+  userStore.reloadFromStorage()
   initCurrentTime()
   loadBaiduMapScript()
   fetchMonitorData()

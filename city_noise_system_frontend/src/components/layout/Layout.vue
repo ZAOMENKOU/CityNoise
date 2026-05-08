@@ -31,7 +31,7 @@
           <el-dropdown class="user-dropdown">
             <div class="user-info">
               <div class="user-avatar">{{ userInitial }}</div>
-              <span class="user-name">{{ userInfo.realName || '用户' }}</span>
+              <span class="user-name">{{ userStore.userInfo?.realName || '用户' }}</span>
               <el-icon class="dropdown-icon"><ArrowDown /></el-icon>
             </div>
             <template #dropdown>
@@ -113,13 +113,9 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { Bell, ArrowDown, DocumentChecked, User, DataAnalysis, Ticket, Timer, UserFilled, Monitor, Histogram, Menu, Lock, SwitchButton } from '@element-plus/icons-vue'
+import { useUserStore } from '@/stores/user'
 
-// 从localStorage中读取用户信息
-const userInfo = ref({
-  realName: '',
-  role: ''
-})
-
+const userStore = useUserStore()
 const router = useRouter()
 const route = useRoute()
 
@@ -132,8 +128,8 @@ const isMobile = ref(window.innerWidth <= 768)
 
 // 计算用户姓名首字母
 const userInitial = computed(() => {
-  if (!userInfo.value.realName) return 'U'
-  return userInfo.value.realName.charAt(0).toUpperCase()
+  if (!userStore.userInfo?.realName) return 'U'
+  return userStore.userInfo.realName.charAt(0).toUpperCase()
 })
 
 // 切换侧边栏显示/隐藏
@@ -158,7 +154,7 @@ const handleResize = () => {
 
 // 检查用户是否已登录
 const isLoggedIn = computed(() => {
-  return !!localStorage.getItem('token') && !!userInfo.value.realName
+  return !!localStorage.getItem('token') && !!userStore.userInfo?.realName
 })
 
 // 当前激活的菜单项（使用完整的路径）
@@ -168,7 +164,7 @@ const activeMenu = computed(() => {
 
 // 根据用户角色生成侧边栏菜单
 const sidebarMenu = computed(() => {
-  const role = userInfo.value.role
+  const role = userStore.userInfo?.role
   
   switch (role) {
     case 'RESIDENT':
@@ -262,39 +258,23 @@ const handleMenuSelect = (index) => {
 
 // 退出登录
 const handleLogout = () => {
-  // 清除本地存储的token和用户信息
-  localStorage.removeItem('token')
-  localStorage.removeItem('userInfo')
-  // 重置用户信息
-  userInfo.value = {
-    realName: '',
-    role: ''
-  }
+  // 使用 Pinia store 登出
+  userStore.logout()
   ElMessage.success('已退出登录')
   router.push('/login')
 }
 
 // 加载用户信息
 const loadUserInfo = async () => {
-  const storedUserInfo = localStorage.getItem('userInfo')
-  if (storedUserInfo) {
-    try {
-      userInfo.value = JSON.parse(storedUserInfo)
-      // 从localStorage读取用户信息后，获取未读通知数
-      await fetchUnreadCount()
-    } catch (error) {
-      console.error('解析用户信息失败:', error)
-      // 解析失败，清除本地存储
-      localStorage.removeItem('userInfo')
-      localStorage.removeItem('token')
-      router.push('/login')
-    }
-  } else {
-    // 没有用户信息，检查是否有token
-    if (localStorage.getItem('token')) {
-      // 有token但没有用户信息，尝试从API获取
-      await fetchUserInfoFromApi()
-    }
+  // 使用 Pinia store 从 localStorage 重新加载
+  userStore.reloadFromStorage()
+  
+  // 获取未读通知数
+  await fetchUnreadCount()
+  
+  // 如果没有用户信息但有token，尝试从API获取
+  if (!userStore.userInfo && localStorage.getItem('token')) {
+    await fetchUserInfoFromApi()
   }
 }
 
@@ -310,8 +290,8 @@ const fetchUserInfoFromApi = async () => {
     const data = await response.json()
     
     if (data.code === 200) {
-      userInfo.value = data.data
-      localStorage.setItem('userInfo', JSON.stringify(data.data))
+      // 使用 Pinia store 更新用户信息
+      userStore.updateUserInfo(data.data)
       
       // 获取未读通知数
       await fetchUnreadCount()
