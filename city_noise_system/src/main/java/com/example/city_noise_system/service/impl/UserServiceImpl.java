@@ -9,13 +9,18 @@ import com.example.city_noise_system.mapper.UserMapper;
 import com.example.city_noise_system.service.UserService;
 import com.example.city_noise_system.vo.UserVO;
 import org.springframework.beans.BeanUtils;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.util.DigestUtils;
 import org.springframework.util.StringUtils;
-import java.nio.charset.StandardCharsets;
 
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
+
+    private final PasswordEncoder passwordEncoder;
+
+    public UserServiceImpl(PasswordEncoder passwordEncoder) {
+        this.passwordEncoder = passwordEncoder;
+    }
 
     @Override
     public UserVO register(RegisterDTO registerDTO) {
@@ -38,9 +43,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         // 4. 强制设置角色为居民
         user.setRole("RESIDENT");
 
-        // 5. 对密码进行MD5加密
-        String encryptedPassword = DigestUtils.md5DigestAsHex(
-                registerDTO.getPassword().getBytes(StandardCharsets.UTF_8));
+        // 5. 对密码进行BCrypt加密
+        String encryptedPassword = passwordEncoder.encode(registerDTO.getPassword());
         user.setPassword(encryptedPassword);
 
         // 6. 设置默认头像
@@ -116,18 +120,15 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
 
         // 2. 验证密码
-        String encryptedPassword = DigestUtils.md5DigestAsHex(
-                loginDTO.getPassword().getBytes(StandardCharsets.UTF_8));
-
-        System.out.println("用户输入的密码: " + loginDTO.getPassword());
-        System.out.println("加密后的密码: " + encryptedPassword);
+        System.out.println("输入的密码: " + loginDTO.getPassword());
         System.out.println("数据库中的密码: " + user.getPassword());
-
-        if (!user.getPassword().equals(encryptedPassword)) {
-            System.out.println("密码验证失败");
+        System.out.println("密码长度: " + user.getPassword().length());
+        
+        boolean matches = passwordEncoder.matches(loginDTO.getPassword(), user.getPassword());
+        System.out.println("密码匹配结果: " + matches);
+        
+        if (!matches) {
             throw new RuntimeException("用户名或密码错误");
-        } else {
-            System.out.println("密码验证成功");
         }
 
         // 3. 转换为VO返回
@@ -178,6 +179,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
         if (StringUtils.hasText(user.getRole())) {
             existingUser.setRole(user.getRole());
+        }
+
+        if (StringUtils.hasText(user.getPassword())) {
+            existingUser.setPassword(passwordEncoder.encode(user.getPassword()));
         }
 
         return updateById(existingUser);

@@ -11,6 +11,7 @@ import com.example.city_noise_system.vo.HandlingRecordVO;
 import com.example.city_noise_system.vo.ResultVO;
 import com.example.city_noise_system.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.util.StringUtils;
 import java.util.List;
@@ -34,6 +35,28 @@ public class AdminController {
 
     @Autowired
     private HandlingRecordService handlingRecordService;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    /**
+     * 临时接口：重置用户密码（开发环境使用）
+     * GET /api/admin/reset-password/{username}
+     */
+    @GetMapping("/reset-password/{username}")
+    public ResultVO<?> resetPassword(@PathVariable String username) {
+        try {
+            User user = userService.getByUsername(username);
+            if (user == null) {
+                return ResultVO.error(400, "用户不存在");
+            }
+            user.setPassword(passwordEncoder.encode("111111"));
+            userMapper.updateById(user);
+            return ResultVO.success("密码已重置为: 111111");
+        } catch (Exception e) {
+            return ResultVO.error(500, "重置失败: " + e.getMessage());
+        }
+    }
 
     /**
      * 获取所有用户列表
@@ -134,9 +157,8 @@ public class AdminController {
                 return ResultVO.error(400, "用户名已存在");
             }
 
-            // 4. 对密码进行MD5加密
-            String encryptedPassword = org.springframework.util.DigestUtils.md5DigestAsHex(
-                    user.getPassword().getBytes(java.nio.charset.StandardCharsets.UTF_8));
+            // 4. 对密码进行BCrypt加密
+            String encryptedPassword = passwordEncoder.encode(user.getPassword());
             user.setPassword(encryptedPassword);
 
             // 5. 设置默认头像

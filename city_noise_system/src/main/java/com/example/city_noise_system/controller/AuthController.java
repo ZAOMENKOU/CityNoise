@@ -10,6 +10,7 @@ import com.example.city_noise_system.vo.UserVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.util.StringUtils;
 
 /**
@@ -173,6 +174,54 @@ public class AuthController {
     public ResultVO<?> logout() {
         // JWT是无状态的，登出操作在前端进行（删除Token）
         return ResultVO.success("登出成功");
+    }
+
+    /**
+     * 上传头像
+     * POST /api/auth/avatar
+     * 需要JWT Token认证
+     */
+    @PostMapping("/avatar")
+    public ResultVO<?> uploadAvatar(
+            @RequestAttribute Long userId,
+            @RequestParam("file") MultipartFile file) {
+        try {
+            if (file == null || file.isEmpty()) {
+                return ResultVO.error(400, "请选择要上传的图片");
+            }
+
+            String originalFilename = file.getOriginalFilename();
+            if (originalFilename == null) {
+                return ResultVO.error(400, "文件名不能为空");
+            }
+
+            String extension = originalFilename.substring(originalFilename.lastIndexOf(".")).toLowerCase();
+            java.util.List<String> allowedExtensions = java.util.Arrays.asList(".jpg", ".jpeg", ".png", ".gif");
+            if (!allowedExtensions.contains(extension)) {
+                return ResultVO.error(400, "只支持上传 JPG、JPEG、PNG、GIF 格式的图片");
+            }
+
+            if (file.getSize() > 5 * 1024 * 1024) {
+                return ResultVO.error(400, "文件大小不能超过 5MB");
+            }
+
+            String fileName = userId + extension;
+            String filePath = "uploads/avatars/" + fileName;
+            java.io.File dest = new java.io.File(filePath);
+            dest.getParentFile().mkdirs();
+            file.transferTo(dest);
+
+            User updateUser = new User();
+            updateUser.setAvatar(filePath);
+            userService.updateUserInfo(userId, updateUser);
+
+            return ResultVO.success("头像上传成功");
+
+        } catch (java.io.IOException e) {
+            return ResultVO.error(500, "头像上传失败: " + e.getMessage());
+        } catch (Exception e) {
+            return ResultVO.error(500, "上传失败");
+        }
     }
 
     // ==================== 内部响应类 ====================

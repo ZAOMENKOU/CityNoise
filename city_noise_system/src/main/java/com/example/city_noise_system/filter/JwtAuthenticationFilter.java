@@ -33,6 +33,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             "/api/auth/register", // 注册接口
             "/api/test/", // 测试接口
             "/api/monitor/generate-data", // 数据生成接口
+            "/api/admin/reset-password/", // 重置密码接口（开发环境）
             "/swagger-ui", // Swagger UI页面
             "/v3/api-docs", // OpenAPI文档
             "/uploads/", // 上传文件访问

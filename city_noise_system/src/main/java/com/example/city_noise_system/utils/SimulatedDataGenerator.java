@@ -170,7 +170,7 @@ public class SimulatedDataGenerator {
         }
     }
 
-@Scheduled(cron = "0 */5 * * * ?")
+    @Scheduled(cron = "0 */5 * * * ?")
     public void generateRealTimeSimulatedData() {
         log.info("定时任务触发生成当前时间模拟数据...");
         generateSimulatedData();
